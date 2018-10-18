@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOMサンプル</title>
+    <script>
+      // コラム p.97
+      window.onload = function(){
+        var button = document.getElementById("button");
+        // ボタンを押した際の処理
+        button.onclick = function(){
+          // div要素を取得
+          var elem = document.getElementById("sample");
+          // textContentプロパティに別のHTMLを指定して表示内容を変更
+          var html = "今日の猫<br><img src=\"images/cat2.jpg\">";
+          elem.textContent = html;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="sample">
+      公園の猫<br>
+      <img src="images/cat1.jpg">
+    </div>
+    <input id="button" type="button" value="HTMLを書き換える">
+  </body>
+</html>
